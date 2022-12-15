@@ -1,11 +1,12 @@
-'use strict'
+'use strict';
 
 function User(name) {
-	this.name = name;
-	this.isAdmin = false;
+		this.name = name;
+		this.sayHi = function () {
+				alert('Меня зовут:' + this.name);
+		};
 }
 
-let user = new User('Dima');
+let john = new User('John');
 
-alert(user.name);
-alert(user.isAdmin);
+john.sayHi();
