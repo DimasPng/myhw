@@ -1,22 +1,10 @@
 'use strict';
 
-let recipeMap = new Map([
-		['помидор', 300],
-		['огурец', 100],
-		['редис', 50],
-]);
+let obj = {
+		name: 'John',
+		age: 30
+};
 
-//перебор по ключам
-for (let key of recipeMap.keys()) {
-		alert(key);
-}
+let map = new Map(Object.entries(obj));
 
-//перебор по значениям
-for (let value of recipeMap.values()) {
-		alert(value);
-}
-
-//перебор по єлементам в формате ключ,значение
-for (let entries of recipeMap) {
-		alert(entries);
-}
+alert(map.get('age'));
