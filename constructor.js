@@ -1,21 +1,12 @@
 'use strict';
 
-let set = new Set();
+let set = new Set(['апельсин', 'яблоко', 'банан']);
 
-let john = {name: 'john'};
-let mary = {name: 'mary'};
-let pete = {name: 'pete'};
-
-//считаем гостей, некоторые приходят по несколько раз
-set.add(john);
-set.add(pete);
-set.add(mary);
-set.add(john);
-set.add(pete);
-
-//сет хранит только 3 уникальных значения
-alert(set.size);
-
-for (let key of set) {
-		alert(key.name);
+for (let value of set) {
+		alert(value);
 }
+
+//тоже самое с foreach
+set.forEach((value, valueAgain, set) => {
+		alert(value);
+});
