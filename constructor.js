@@ -1,10 +1,13 @@
 'use strict';
 
-let obj = {
-		name: 'John',
-		age: 30
-};
+let map = new Map();
+map.set('banana', 1);
+map.set('orange', 2);
+map.set('meat', 4);
 
-let map = new Map(Object.entries(obj));
+let obj = Object.fromEntries(map.entries());
 
-alert(map.get('age'));
+// готово!
+// obj = { banana: 1, orange: 2, meat: 4 }
+
+alert(obj.banana);
