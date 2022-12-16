@@ -1,11 +1,9 @@
 'use strict';
 
-let map = new Map();
+let john = {name: 'john'};
 
-map.set('1', 'str1');
-map.set(1, 'number');
-map.set(true, 'bool');
+let visitCountMap = new Map();
 
-alert(map.get('1'));
-alert(map.get(1));
-alert(map.get(true));
+visitCountMap.set(john, 123);
+
+alert(visitCountMap.get(john));
