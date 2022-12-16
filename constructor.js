@@ -1,13 +1,21 @@
 'use strict';
 
-let map = new Map();
-map.set('banana', 1);
-map.set('orange', 2);
-map.set('meat', 4);
+let set = new Set();
 
-let obj = Object.fromEntries(map.entries());
+let john = {name: 'john'};
+let mary = {name: 'mary'};
+let pete = {name: 'pete'};
 
-// готово!
-// obj = { banana: 1, orange: 2, meat: 4 }
+//считаем гостей, некоторые приходят по несколько раз
+set.add(john);
+set.add(pete);
+set.add(mary);
+set.add(john);
+set.add(pete);
 
-alert(obj.banana);
+//сет хранит только 3 уникальных значения
+alert(set.size);
+
+for (let key of set) {
+		alert(key.name);
+}
