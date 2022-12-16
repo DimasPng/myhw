@@ -1,12 +1,11 @@
 'use strict';
 
-function User(name) {
-		this.name = name;
-		this.sayHi = function () {
-				alert('Меня зовут:' + this.name);
-		};
-}
+let map = new Map();
 
-let john = new User('John');
+map.set('1', 'str1');
+map.set(1, 'number');
+map.set(true, 'bool');
 
-john.sayHi();
+alert(map.get('1'));
+alert(map.get(1));
+alert(map.get(true));
