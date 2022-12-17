@@ -11,14 +11,14 @@ FORM.onsubmit = function (event) {
 BUTTON.addEventListener('click', saveInLocalStorage);
 
 function saveInLocalStorage() {
-		localStorage.setItem('cityList', input.value);
+		localStorage.setItem('cityList', INPUT.value);
 }
 
 function render() {
 		const ARRAY = localStorage.getItem('cityList');
 		console.log(ARRAY);
-		let set = new Set(ARRAY);
-		alert(set.size);
+		let set = new Set(ARRAY); //в set город записывает по буквам.
+		console.log(set.size);
 }
 
 render();
