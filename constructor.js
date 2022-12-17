@@ -11,7 +11,7 @@ FORM.onsubmit = function (event) {
 BUTTON.addEventListener('click', saveInLocalStorage);
 
 function saveInLocalStorage() {
-		localStorage.setItem('cityList', input.value);
+		localStorage.setItem('cityList', INPUT.value);
 }
 
 function render() {
